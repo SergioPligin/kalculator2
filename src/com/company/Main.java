@@ -22,7 +22,7 @@ class Main {
         if (myList.size() != 3) {
             throw new Exception("Вы должны ввести число действие и второе число");
         }
-        boolean check = checkDeystvie(metod, myList.get(1));
+        boolean check = checkDeystvie(myList.get(1));
         if (!check) {
             throw new Exception("вы неправильно ввели действие над числами");
         }
@@ -46,7 +46,7 @@ class Main {
         }
     }
 
-    static boolean checkDeystvie(String[] metod, String wwod) {
+    static boolean checkDeystvie(String wwod) {
 
         for (String s : Main.metod) {
             //System.out.println(s + myList.get(0) + myList.get(1) + myList.get(2));
@@ -62,3 +62,5 @@ class Main {
         return arab > 0 && arab <= 10;
     }
 }
+//    fffffff
+
