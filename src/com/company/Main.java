@@ -6,9 +6,9 @@ import java.util.regex.Pattern;
 
 class Main {
 
-    static int last = 2000;
-    static int numbers[] = {1, 4, 5, 9, 10};
-    static String[] letters = {"I", "IV", "V", "IX", "X", "L", "C", "D", "M"};
+    //static int last = 2000;
+    //static int numbers[] = {1, 4, 5, 9, 10};
+    //static String[] letters = {"I", "IV", "V", "IX", "X", "L", "C", "D", "M"};
     static String[] metod = {"+", "-", "*", "/"};
 
     public static void main(String[] args) throws Exception {
@@ -34,13 +34,14 @@ class Main {
             if (pervoe.matches() && vtoroe.matches()) {
                 System.out.println("Работаем с римскими");
                 System.exit(0);
-            } else if (checkArabic(myList.get(0)) && checkArabic(myList.get(2))
+            }
+            if (checkArabic(myList.get(0)) && checkArabic(myList.get(2))
             ) {
                 System.out.println("Работаем с арабскими");
                 System.exit(0);
             }
             System.out.println("Числа могут быть от 1 до 10");
-            //throw new Exception("Некоректный ввод данных");
+            throw new Exception("Некоректный ввод данных");
         } catch (Exception e) {
             throw new Exception("Некоректный ввод данных");
         }
