@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 
 class Main {
 
-    //static int last = 2000;
+    // static int last = 2000;
     //static int numbers[] = {1, 4, 5, 9, 10};
     //static String[] letters = {"I", "IV", "V", "IX", "X", "L", "C", "D", "M"};
     static String[] metod = {"+", "-", "*", "/"};
@@ -14,7 +14,7 @@ class Main {
     public static void main(String[] args) throws Exception {
         System.out.println("Enter your Roman Numerals or Integer number:");
         Scanner cti = new Scanner(System.in);
-        String strings = cti.nextLine();
+        String strings = cti.nextLine().toUpperCase();
         List<String> myList = new ArrayList<>(Arrays.asList(strings.split(" ")));
         System.out.println(myList);
         myList.removeIf(String::isEmpty);
@@ -35,8 +35,7 @@ class Main {
                 System.out.println("Работаем с римскими");
                 System.exit(0);
             }
-            if (checkArabic(myList.get(0)) && checkArabic(myList.get(2))
-            ) {
+            if (checkArabic(myList.get(0)) && checkArabic(myList.get(2))) {
                 System.out.println("Работаем с арабскими");
                 System.exit(0);
             }
